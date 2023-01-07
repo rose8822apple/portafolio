@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+    let item , num , precio , total , descuento1 , descuento2;
+
+    item= prompt('¿Que quiere comprar?');
+    num= parseInt(prompt ('¿Cuantos quieres comprar?'));
+    precio= prompt('¿cuanto cuesta?');
+    total= precio*num;
+    descuento1= (total*10)/100;
+    descuento2= (total*20)/100;
+
+    if (num>=10){
+        document.write(total-descuento1 + '<= este seria el monto total'); 
+             }else if (num>20) {
+                 document.write(total-descuento2 + '<= este seria el monto total');
+                    } else(num<9);{
+                        document.write(toral + '<= este seria el monto total');
+                    
+                    }
+
+                    
+
+    </script>
+</body>
+</html>

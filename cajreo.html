@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+</head>
+<body>
+    <h2>Menu del cajero</h2>
+<script>
+    
+    let menuopcion;
+    menu=("1. Crear contraseña 2. Cambiar contraseña 3. Depósito 4. Retiro 5. Consulta de saldo 6.Salir")
+            menuopcion=prompt(menu);
+    
+   
+    let pasword;
+    function CrearContraseña(){
+        pasword=prompt('introduzca la nueva contraseña');
+        menuopcion=prompt('1. Crear contraseña 2. Cambiar contraseña 3. Depósito 4. Retiro 5. Consulta de saldo 6.Salir')
+        return pasword;
+      
+    };
+
+    function CambiarContraseña(){
+        let verificar
+        verificar=prompt('introduzca su contraseña actual:');
+        if(verificar==pasword){
+        pasword=prompt('indroduzca la nueva contraseña')}
+         else{alert('contraseña invalida')}
+        menuopcion=prompt('1. Crear contraseña 2. Cambiar contraseña 3. Depósito 4. Retiro 5. Consulta de saldo 6.Salir')
+        return pasword;
+       
+
+    };
+
+
+    let baul=0;
+    let insertar;
+    let depositototal;
+    function deposito(){
+        insertar=parseInt(prompt('Cuanto quiere depositar:'));
+        depositototal=baul+insertar;
+
+        alert('Usted deposito:'+insertar);
+        alert('Su saldo actual es:'+ depositototal);
+        menuopcion=prompt('1. Crear contraseña 2. Cambiar contraseña 3. Depósito 4. Retiro 5. Consulta de saldo 6.Salir')
+        return depositototal;
+    };
+
+
+    let retirar
+    let retirototal
+    function retiro(){
+        retirar=parseInt(prompt('cuanto quiere retirar:'));
+        retirototal=baul-retirar;
+        alert('Su saldo actual es:'+ retirototal);
+        alert('Usted retiro:'+retirar);
+        menuopcion=prompt('1. Crear contraseña 2. Cambiar contraseña 3. Depósito 4. Retiro 5. Consulta de saldo 6.Salir')
+        return retirototal;
+       
+
+    };
+   
+
+    function consultar(){
+        alert('su saldo actual es:'+baul);
+        menuopcion=prompt('1. Crear contraseña 2. Cambiar contraseña 3. Depósito 4. Retiro 5. Consulta de saldo 6.Salir')
+        
+    };
+
+    menu=("1. Crear contraseña 2. Cambiar contraseña 3. Depósito 4. Retiro 5. Consulta de saldo 6.Salir")
+            menuopcion=prompt(menu);
+    
+   
+    if(menuopcion==1){
+        CrearContraseña();
+    };
+    
+
+    if(menuopcion==2){
+        CambiarContraseña();
+    };
+
+    if(menuopcion==3){
+        deposito();
+    };
+
+    if(menuopcion==4){
+        retiro();
+    };
+
+    if(menuopcion==5){
+        consultar();
+    };
+
+    if (retirar>baul){
+        alert('Saldo insuficiente.');
+    };
+  
+  
+    
+</script>
+</body>
+</html>
